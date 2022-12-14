@@ -4,17 +4,17 @@ import './styles.css';
 
 export default function BookEdit({book, setShow}) {
   const [title, setTitle] = useState(book.title);
-  const books = useContext(BooksContext);
+  const {editBook} = useContext(BooksContext);
 
-  const editBook = (e) => {
+  const updateBook = (e) => {
     e.preventDefault();
-    books.editBook(title, book.id);
+    editBook(title, book.id);
     setShow(false);
   }
 
   return (
     <>
-      <form  className="book-edit" onSubmit={editBook}>
+      <form  className="book-edit" onSubmit={updateBook}>
         <label>Title</label>
         <input
         className="input"

@@ -4,12 +4,12 @@ import BooksContext from '../context';
 
 export default function BookCreate() {
   const [title, setTitle] = useState('');
-  const book = useContext(BooksContext);
+  const {addBook} = useContext(BooksContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {title};
-    book.addBook(newBook);
+    addBook(newBook);
     // postBook(newBook);
     setTitle('');
   };  

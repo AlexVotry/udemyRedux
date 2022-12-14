@@ -3,11 +3,11 @@ import BookEdit from "./BookEdit";
 import BooksContext from '../context';
 
 export default function BookShow({book}) {
-  const books = useContext(BooksContext);
   const [show, setShow] = useState(false);
+  const {removeBook} = useContext(BooksContext);
 
   const deleteBook = () => {
-    books.removeBook(book.id);
+    removeBook(book.id);
   }
 
   let content = <h3>{book.title}</h3>
