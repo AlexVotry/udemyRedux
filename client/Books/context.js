@@ -2,7 +2,7 @@
 
 // export default createContext({});
 
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useCallback } from 'react';
 import { deleteBook, getAllBooks, postBook, putBook } from "./services/apiRequest";
 
 const BooksContext = createContext();
@@ -10,10 +10,10 @@ const BooksContext = createContext();
 function Provider({ children }) {
   const [books, setBooks] = useState([]);
 
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     const bookList = await getAllBooks();
     setBooks(bookList);
-  }
+  }, []);
 
   const addBook = async (book) => {
     const newBook = await postBook(book);
