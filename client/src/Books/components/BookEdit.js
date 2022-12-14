@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import context from '../context';
+import BooksContext from '../context';
 import './styles.css';
 
 export default function BookEdit({book, setShow}) {
   const [title, setTitle] = useState(book.title);
-  const books = useContext(context);
+  const books = useContext(BooksContext);
 
   const editBook = (e) => {
     e.preventDefault();

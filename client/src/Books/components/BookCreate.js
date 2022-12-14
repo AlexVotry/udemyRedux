@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
-import context from '../context';
+import BooksContext from '../context';
+// import { postBook } from "../services/apiRequest";
 
 export default function BookCreate() {
   const [title, setTitle] = useState('');
-  const book = useContext(context);
+  const book = useContext(BooksContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {title};
-    newBook.id = Math.floor(Math.random() * 1000);
     book.addBook(newBook);
+    // postBook(newBook);
     setTitle('');
   };  
 

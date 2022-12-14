@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import BookEdit from "./BookEdit";
-import context from '../context';
+import BooksContext from '../context';
 
 export default function BookShow({book}) {
-  const books = useContext(context);
+  const books = useContext(BooksContext);
   const [show, setShow] = useState(false);
 
   const deleteBook = () => {
