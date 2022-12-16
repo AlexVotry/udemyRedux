@@ -9,7 +9,7 @@ export default function BookList() {
 
   useEffect(() => {
     fetchBooks();
-  }, [])
+  }, [fetchBooks])
 
   return (
     <div className="book-list">

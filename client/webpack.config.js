@@ -1,4 +1,5 @@
 const path = require("path");
+const { default: postcss } = require("postcss");
 const webpack = require('webpack');
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
-    port: 9000,
+    port: 3000,
     static: path.resolve(__dirname, "dist"),
     hot: true,
   },
@@ -51,7 +52,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
   },

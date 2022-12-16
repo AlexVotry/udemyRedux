@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './Books/App';
-import './Books/index.css';
+import App from './comps/App';
+import './comps/index.css';
+
 /// drag folder into src
+// import App from './Books/App';
+// import './Books/index.css';
 // import App from "./AnimalShow/App";   
 // import App from "./apiPics/App";
 
