@@ -1,7 +1,9 @@
 a little practice with updated redux.
+I decided to use the same shell for all the tutorials. 
+I put them in their own folders and when I completed them and moved the folder out of the src folder, up into the client folder. 
+If you want to run one of those folders, just move it into the src folder and uncomment the import App statement in the index.js file.
 
-
-for Animal--
+for Books--
   I'm using json-server (npm json-server) for a mock server with db.json file as the "server".
   I'm using REST client (vs-code extension) for API testing.  (api.http file);
   package.json: "server" : "json-server --port 3001 --watch db.json --host 127.0.0.1"

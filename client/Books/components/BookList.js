@@ -17,17 +17,3 @@ export default function BookList() {
     </div>
   )
 }
-
-
-useEffect(() => {
-  const listener = () => {
-    console.log(counter);
-  };
-
-  document.body.addEventListener('click', listener);
-
-  return () => {
-    document.body.removeEventListener('click', listener);
-  }
-
-}, [counter])

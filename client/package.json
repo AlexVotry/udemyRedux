@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "server": "json-server -p 3001 --watch db.json",
+    "server": "json-server -p 3001 --watch src/Books/services/db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

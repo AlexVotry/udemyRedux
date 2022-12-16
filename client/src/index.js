@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from './comps/App';
-import './index.css';
+import './comps/index.css';
 
 /// drag folder into src
 // import App from './Books/App';

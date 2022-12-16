@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from './components/Button';
 import {GoBell, GoCloudDownload, GoAlert, GoCalendar} from 'react-icons/go';
 
 export default function App () {

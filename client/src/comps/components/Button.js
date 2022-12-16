@@ -1,6 +1,6 @@
 import React from 'react';
 import className from 'classnames';
-import { getColor } from './colors';
+import { getColor } from '../utilities/colors';
 
 export default function Button ({ rounded , outline , primary, secondary, success, warning, danger, children, ...rest }) {
   const states = [primary,secondary,success,warning,danger];
