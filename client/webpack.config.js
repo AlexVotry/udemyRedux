@@ -1,4 +1,5 @@
 const path = require("path");
+const { default: postcss } = require("postcss");
 const webpack = require('webpack');
 
 module.exports = {
@@ -51,7 +52,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
   },
