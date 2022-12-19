@@ -8,38 +8,15 @@ export default function ButtonPage() {
   };
 
   return (
-    <>
-      <div>
-        <Button danger outline onClick={handleClick} className="mb-5">
-          <GoBell /> Click Me!!
-        </Button>
-      </div>
-      <div>
-        <Button success rounded>
-          <GoAlert />
-          second
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded outline>
-          <GoCloudDownload />
-          third
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoCalendar />
-          forth
-        </Button>
-      </div>
-      <div>
-        <Button warning rounded outline>
-          fifth
-        </Button>
-      </div>
-      <div>
-        <Button danger>sixth</Button>
-      </div>
-    </>
-  );
+    <div className="p-3">
+      <Button danger outline onClick={handleClick} className="mb-5">
+        <GoBell /> Click Me!!
+      </Button>
+      <Button success> <GoAlert /> second </Button>
+      <Button primary rounded outline> <GoCloudDownload /> third </Button>
+      <Button secondary outline> <GoCalendar /> forth </Button>
+      <Button warning rounded outline> fifth </Button>
+      <Button danger>sixth</Button>
+  </div>
+  )
 }
