@@ -1,15 +1,15 @@
 import React from 'react';
 import AccordionPage from './pages/AccordionPage';
 import ButtonPage from './pages/ButtonPage';
-import DropDownPage from './pages/DropDownPage';
+import DropdownPage from './pages/DropDownPage';
 
 export default function App () {
 
   return (
-    <>
+    <div className='flex'>
       <ButtonPage />
       <AccordionPage/>
-      <DropDownPage/>
-    </>
+      <DropdownPage/>
+    </div>
   );
 }

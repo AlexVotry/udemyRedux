@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Dropdown from '../components/Dropdown';
 
-export default function DropDownPage () {
+export default function DropdownPage () {
+  const [selector, setSelector] = useState(null);
+
+  const dropdown = [ 
+    {label: 'Blue', value: 'blue' },
+    {label: 'Red', value: 'red' },
+    {label: 'Green', value: 'green' },
+    {label: 'Purple', value: 'purple'},
+  ];
 
   return (
     <div>
-      DropDownPage
+      <Dropdown options={dropdown} value={selector} onChange={setSelector}/>
     </div>
   )
 }

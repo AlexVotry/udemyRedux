@@ -8,7 +8,7 @@ for Books--
   I'm using REST client (vs-code extension) for API testing.  (api.http file);
   package.json: "server" : "json-server --port 3001 --watch db.json --host 127.0.0.1"
 
-in the comps folder I am using Tailwindcss.  What I discovered:
+in the comps folder I am using Tailwindcss https://v2.tailwindcss.com/docs.  What I discovered:
 
 ```The most important implication of how Tailwind extracts class names is that it will only find classes that exist as complete unbroken strings in your source files.If you use string interpolation or concatenate partial class names together, Tailwind will not find them and therefore will not generate the corresponding CSS.```
 

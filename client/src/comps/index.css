@@ -9,3 +9,7 @@ button > svg {
 div > svg {
   margin-right: 5px;
 }
+
+li {
+  list-style: none;
+}
