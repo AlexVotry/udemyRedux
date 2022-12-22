@@ -14,6 +14,7 @@ module.exports = {
     port: 3000,
     static: path.resolve(__dirname, "dist"),
     hot: true,
+    historyApiFallback: true,
   },
   devtool: false,
   module: {
