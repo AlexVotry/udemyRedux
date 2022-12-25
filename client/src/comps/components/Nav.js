@@ -7,7 +7,8 @@ export default function Nav () {
     { label: "Button", path: "/button" },
     { label: 'Accordion', path: '/accordion' },
     { label: 'Drop Down', path: '/dropdown' },
-    { label: 'Modal', path: '/modal' }
+    { label: 'Modal', path: '/modal' },
+    { label: 'Table', path: '/table' },
   ];
 
   const renderedLinks = links.map(link => 

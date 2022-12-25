@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Route from './components/Route';
 import { NavProvider } from './NavContext';
 import ModalPage from './pages/ModalPage';
+import TablePage from './pages/TablePage';
 
 
 export default function App () {
@@ -19,6 +20,7 @@ export default function App () {
           <Route path='/dropdown'><DropdownPage/></Route>
           <Route path='/button'><ButtonPage/></Route>
           <Route path='/modal'><ModalPage/></Route>
+          <Route path='/table'><TablePage/></Route>
         </div>
       </div>
     </NavProvider>
