@@ -1,7 +1,7 @@
-export default function objSort (data,row,order) {
+export default function objSort (data,sortValue,order) {
  return  data.sort((a,b) => {
-    const valA = row(a);
-    const valB = row(b);
+    const valA = sortValue(a);
+    const valB = sortValue(b);
     if (typeof valA === 'string') return valA.localeCompare(valB) * order;
 
     return (valA - valB) * order;
