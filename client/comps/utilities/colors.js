@@ -2,10 +2,10 @@
 const primary = "blue-500";
 const secondary = 'gray-900';
 const success = 'green-500';
-const caution = 'yellow-400';
+const warning = 'yellow-400';
 const danger = 'red-500';
 
-export const color = [primary,secondary,success,caution,danger];
+export const color = [primary,secondary,success,warning,danger];
 
 export const getColor = states => {
   let i = 0;

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
+    "media:server": "json-server -p 3005 --watch src/media/services/db.json",
     "server": "json-server -p 3001 --watch src/Books/services/db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,7 @@
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@faker-js/faker": "^7.6.0",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.1",
     "babel-loader": "^9.1.0",

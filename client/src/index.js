@@ -2,16 +2,23 @@ import React from "react";
 import 'bulma/css/bulma.css';
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import App from './cars/App';
-import { store } from './cars/store';
-import './cars/styles.css';
+import App from './media/App';
+import './media/index.css';
+import { store } from './media/store';
 
 /// drag folder into src
+// import App from './cars/App';
+// import { store } from './cars/store';
+// import './cars/styles.css';
+
 // import App from './comps/App';
 // import './comps/index.css';
+
 // import App from './Books/App';
 // import './Books/index.css';
+
 // import App from "./AnimalShow/App";   
+
 // import App from "./apiPics/App";
 
 if (module.hot) module.hot.accept();

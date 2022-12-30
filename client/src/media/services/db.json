@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Harry",
+      "id": 2
+    },
+    {
+      "name": "Alexandra King",
+      "id": 3
+    },
+    {
+      "name": "Billie Kirlin",
+      "id": 4
+    },
+    {
+      "name": "Heidi Ledner Sr.",
+      "id": 5
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
