@@ -1,59 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { fetchUsers, addUser } from '../store';
 import Skeleton from './Skeleton';
 import Button from './Button';
+import UsersListItem from './UsersListItem';
+import { useThunk } from '../hooks/useThunk';
 
 export default function UsersList () {
-  const dispatch = useDispatch();
-  const [isLoadingAllUsers, setIsLoadingAllUsers] = useState(false);
-  const [isLoadingUsersError, setIsLoadingUsersError] = useState(null);
-  const [isCreatingUser, setIsCreatingUser] = useState(false);
-  const [isCreatingUserError, setIsCreatingUserError] = useState(false);
+  const [doFetchUsers, isLoadingUsers, loadingUsersErrors] = useThunk(fetchUsers);
+  const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
   const { data } =  useSelector(state => state.users);
-
-  
-  const renderedUsers = data.map(({name, id}) => {
-    return (
-      <div key={id} className="mb-2 border rounded">
-        <div className='flex p-2 justify-between items-center cursor-pointer'>
-          {name}
-        </div>
-      </div>
-    )
-  })
+  let content;
   
   useEffect(() => {
-    setIsLoadingAllUsers(true);
-    dispatch(fetchUsers())
-      .unwrap()
-      .catch((err) => setIsLoadingUsersError(err))
-      .finally(() => setIsLoadingAllUsers(false));
+    doFetchUsers();
   }, []);
-
+  
   const handleUserAdd = () => {
-    setIsCreatingUser(true);
-    dispatch(addUser())
-      .unwrap()
-      .catch((err) => setIsCreatingUserError(err))
-      .finally(() => setIsCreatingUser(false));
+    doCreateUser();
   };
 
-  if (isLoadingAllUsers) return <Skeleton times={6} className="h-10 w-full"/>
-  if (isLoadingUsersError) return <div>{error.message}</div>;
+  if (isLoadingUsers) content = <Skeleton times={6} className="h-10 w-full" />;
+  else if (loadingUsersErrors) content = <div>{error.message}</div>;
+  else content = data.map(user => <UsersListItem key={user.id} user={user}/>);
 
   return (
     <div>
       <div className="flex flex-row justify-between m-3">
         <h1 className="m-2 text-xl">Users</h1>
-        { isCreatingUser ? 'Creating User...' :
-          <Button success onClick={handleUserAdd}>
+          <Button loading={isCreatingUser} success onClick={handleUserAdd}>
             + Add User
           </Button>
-        }
-        { isCreatingUserError && 'error' }
+        { creatingUserError && creatingUserError.message}
       </div>
-      {renderedUsers}
+      {content}
     </div>
   );
 }
