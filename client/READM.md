@@ -25,7 +25,7 @@ a very basic use of redux with redux-toolkit. I created two slices (cars, forms)
 ### **Media --**
   I'm using groups: Users, Albums, Photos.
   For the User I will create a userSlice and use Async/Thunk.  This is past its prime, but is still used on older apps, so I thought it worth exploring.
-  the 'Albums' and 'Photos' I use modern redux toolkit query. This creates the slice in the createApi tool and makes useful hooks. 
+  the 'Albums' and 'Photos' I use modern redux toolkit query. This creates the slice in the createApi tool and makes useful hooks. Notice the use of tags to keep track of which group of albums or photos to rerender.
   I used the json-server and api.http file: <br/>
   ``` "media:server": "json-server -p 3005 --watch src/media/services/db.json",```
 
