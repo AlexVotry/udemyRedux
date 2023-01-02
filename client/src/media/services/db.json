@@ -13,6 +13,48 @@
       "id": 4
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": 1,
+      "title": "Hiking Trip",
+      "userId": 1
+    },
+    {
+      "title": "Tasty Frozen Chips",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "title": "Elegant Plastic Bacon",
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "title": "Unbranded Soft Gloves",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "Fantastic Granite Tuna",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "Tasty Soft Keyboard",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "Generic Steel Ball",
+      "userId": 4,
+      "id": 13
+    }
+  ],
+  "photos": [
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=59363",
+      "albumId": 1,
+      "id": 1
+    }
+  ]
 }
